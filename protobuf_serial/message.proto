@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package tutorial;
+
+message Heroalarm {
+
+  message Position {
+    int32 ld = 1 ;
+    int32 rd = 2 ;
+    int32 ru = 3 ;
+    int32 lu = 4 ;
+  }
+
+  int32 exsit = 1 ;
+
+}
+
+message Flyslope {
+  string FSalarm = 1;
+
+}
+message Energyorgan {
+  string EOalarm = 1;
+}

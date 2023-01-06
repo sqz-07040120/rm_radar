@@ -1,0 +1,117 @@
+{
+  "Camera": {
+    "Debug": false,
+    "DefaultMode": "AutoAim",
+    "General": {
+      "ColorCode": "GB2BGR",
+      "Filp": false,
+      "RedBlance": 1.4844,
+      "GreenBlance": 1,
+      "BlueBlance":1.66
+    },
+    "AutoAim":{
+      "ExposureTime":8000.0,
+      "Gain": 12.0
+    },
+    "Rune":{
+      "ExposureTime":2000.0,
+      "Gain": 0.0
+    }
+  },
+  "DistanceMeasurement": {
+    "InternalMatrix": {
+      "fx":1278.33660068801,
+      "fy":1278.12294117297,
+      "cx":649.473715822858,
+      "cy":518.984335219607
+    },
+    "DistortionMatrix": {
+      "k1": 0.0,
+      "k2": 0.0,
+      "k3": 0.0,
+      "p1": 0.0,
+      "p2": 0.0
+    }
+  },
+  "SerialPort":{
+    "Debug": true,
+    "PortPath": "/dev/ttyUSB0"
+  },
+  "AutoAim": {
+    "Debug": true,
+    "OnnxFilePath": "../Asset/model-opt-4.onnx",
+    "TRTEnginePath": "../Asset/SJTU.trt",
+    "InputLayerName":"images",
+    "OutputLayerName":"output",
+    "FP16": true
+  },
+  "Rune": {
+    "Debug": false,
+    "DebugParams": {
+      "Show":{
+        "flow": false,
+        "action": false,
+        "R": false,
+        "A": false,
+        "wb": false,
+        "rb": false,
+        "not_processed": false,
+        "predict": false
+      },
+      "Draw": {
+        "Fregion": false,
+        "flow": false,
+        "R": false,
+        "Action": false,
+        "Rregion": false
+      }
+    },
+    "predict_time": 0.04,
+    "wb_threshold": 60,
+    "rb_threshold": 60,
+    "d1": 0,
+    "m1": 0,
+    "d2": 0,
+    "m2": 0,
+    "d3": 2,
+    "m3": 0,
+    "mask1_d1": 2,
+    "mask1_e1": 0,
+    "mask2_d2": 0,
+    "mask2_e2": 0,
+    "mask3_d3": 2,
+    "mask3_e3": 0
+  },
+  "Predictor": {
+    "Debug": false,
+    "MaxLoss": 1,
+    "MaxXLoss": 0.05,
+    "MaxYLoss": 0.1,
+    "WindowLength": 60,
+    "MaxNumIterations": 10,
+    "MaxXVariance": 0.1,
+    "MaxYVariance": 0.25,
+    "MeanRadio": 0.3,
+    "ShootDelay": 0.2,
+    "MaxDelayTime": 0.3,
+
+    "Q": {
+      "Q00": 0.005,
+      "Q11": 0.005,
+      "Q22": 0.0005,
+      "Q33": 1,
+      "Q44": 1,
+      "Q55": 0.001,
+      "Q66": 0.001
+    },
+    "R": {
+      "R00": 10,
+      "R11": 10,
+      "R22": 100,
+      "R33": 1,
+      "R44": 1,
+      "R55": 50,
+      "R66": 50
+    }
+  }
+}
